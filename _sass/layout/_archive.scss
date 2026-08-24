@@ -11,7 +11,7 @@
 
   @include breakpoint($large) {
     @include span(10 of 12 last);
-    @include prefix(0.5 of 12);
+    @include prefix(1 of 12);
   }
 
   a {
@@ -241,5 +241,74 @@
         width: span(7 of 12);
       }
     }
+  }
+}
+
+
+/* Publication list
+   ========================================================================== */
+
+.publication__item {
+  margin-bottom: 2.5rem;
+}
+
+.publication__title {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: var(--global-text-color);
+  font-size: $type-size-5;
+  line-height: 1.45;
+  text-decoration: none;
+}
+.publication__body {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  color: var(--global-text-color);
+}
+
+.publication__body p {
+  margin: 0;
+}
+
+.publication__citation {
+  margin-bottom: 0.3rem;
+  font-size: 0.8rem;
+  line-height: 1.25;
+}
+
+.publication__citation p {
+  margin: 0;
+}
+
+.publication__links {
+  margin-top: 0.25rem;
+  font-size: 1.15rem;
+}
+
+.archive .publication__links a {
+  display: inline-block;
+  margin-right: 0.4rem;
+  text-decoration: none;
+}
+
+
+/* Publication bullets in CV
+   ========================================================================== */
+
+.cv-publications {
+  .list__item {
+    margin-bottom: 0.25rem;
+  }
+
+  .archive__item-title {
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .archive__item-excerpt {
+    margin-top: 0;
+    margin-bottom: 0rem;
   }
 }

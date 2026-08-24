@@ -12,7 +12,7 @@ site_theme               : "default" # The available themes options are "default
 title                    : "Jingya Miao"
 title_separator          : "-"
 name                     : &name "Jingya Miao"
-description              : &description "PhD applicant"   # Update this with a general description of your site, this is the default if not overridden by a page
+description              : &description ""   # Update this with a general description of your site, this is the default if not overridden by a page
 url                      : https://miaojingya.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -23,14 +23,14 @@ repository               : "miaojingya/miaojingya.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "portrait.png"
   name             : "Jingya Miao"
   pronouns         : # example: "she/her"  
-  bio              : "Biomedical Engineering | Neuroimaging | Computational Neuroscience"
+  bio              : "Biomedical Engineering | Neuroimaging | Neuromodulation"
   location         : "Los Angeles, California"
   employer         : # example: "Red Brick University"
   uri              : # URL
-  email            : #
+  email            : # j.miao.bme@gmail.com
 
   # Academic websites
   academia         : # URL
@@ -66,7 +66,7 @@ author:
   keybase          : # Username
   instagram        : # Username
   lastfm           : # Username
-  linkedin         : "jingya-miao" # Username
+  linkedin         : "jingya-miao" 
   mastodon         : # URL
   medium           : # URL
   pinterest        : # Username
@@ -84,12 +84,12 @@ author:
 
 # Publication Category - The following the list of publication categories and their headings
 publication_category:
-  books:
-    title: 'Books'
   manuscripts:
     title: 'Journal Articles'    
+  books:
+    title: 'Books'
   conferences:
-    title: 'Conference Papers'
+    title: 'Conferences'
 
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/ for social media previews

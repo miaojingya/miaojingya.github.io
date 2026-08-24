@@ -1,0 +1,79 @@
+{% include base_path %}
+
+{% if post.header.teaser %}
+  {% capture teaser %}{{ post.header.teaser }}{% endcapture %}
+{% else %}
+  {% assign teaser = site.teaser %}
+{% endif %}
+
+{% if post.id %}
+  {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+{% else %}
+  {% assign title = post.title %}
+{% endif %}
+
+
+<div class="list__item publication__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/ScholarlyArticle">
+
+    <h2 class="publication__title" itemprop="headline">
+      {{ title }}
+    </h2>
+
+    {% if post.excerpt %}
+      <div class="publication__body" itemprop="description">
+        {{ post.excerpt | markdownify }}
+      </div>
+    {% endif %}
+
+    {% if post.citation %}
+      <div class="publication__citation">
+        {{ post.citation }}
+      </div>
+    {% else %}
+      <div class="publication__citation">
+        {% if post.authors %}{{ post.authors }}. {% endif %}
+        {{ post.date | date: "%Y" }}.
+        “{{ post.title }}.”
+        {% if post.venue %}<em>{{ post.venue }}</em>.{% endif %}
+      </div>
+    {% endif %}
+
+    <div class="publication__links">
+
+      {% if post.doi %}
+        <a href="https://doi.org/{{ post.doi }}"
+           aria-label="DOI"
+           title="View publication">
+          <i class="fas fa-link" aria-hidden="true"></i>
+        </a>
+      {% endif %}
+
+      {% if post.paperurl %}
+        <a href="{{ post.paperurl }}"
+           aria-label="PDF"
+           title="Download paper">
+          <i class="fas fa-file-pdf" aria-hidden="true"></i>
+        </a>
+      {% endif %}
+
+      {% if post.slidesurl %}
+        <a href="{{ post.slidesurl }}"
+           aria-label="Slides"
+           title="Download slides">
+          <i class="fas fa-file-powerpoint" aria-hidden="true"></i>
+        </a>
+      {% endif %}
+
+      {% if post.bibtexurl %}
+        <a href="{{ post.bibtexurl }}"
+           aria-label="BibTeX"
+           title="Download BibTeX">
+          <i class="fas fa-code" aria-hidden="true"></i>
+        </a>
+      {% endif %}
+
+    </div>
+
+  </article>
+</div>
