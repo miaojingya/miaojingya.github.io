@@ -25,8 +25,8 @@ Research Fellow, Thomas Jefferson University Hospital |  Aug 2018-Present<br>
     * Developing automated localization of DBS electrodes for assessing electrode deviation due to physical obstacles of brain tissue, using python in 3D Slicer environment. 
     * Through quantitative and precise DBS localization compared to planned trajectory to improve reproducibility and clinical outcomes. 
     <!-- * GitHub repository: link -->
-  *DBS on-off (ongoing)
-    * Developed MATLAB script to visualize brain BOLD signal changes as DBS turned on vs. off to understand impacts of DBS on Parkinson disease.
+  <!-- * DBS on-off (ongoing)
+    * Developed MATLAB script to visualize brain BOLD signal changes as DBS turned on vs. off to understand impacts of DBS on Parkinson disease. -->
   * Functional Connectivity in Spinal Cord Injury, Epilepsy, Anesthesia 
     * Investigated dynamic functional connectivity using resting state fMRI in temporal lobe epilepsy using ICA, seed/ROI-based analysis and group-level statistical approaches. 
     * Developed/implemented imaging workflows relating seizure network organization to LITT treatment outcomes
