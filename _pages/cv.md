@@ -12,7 +12,7 @@ redirect_from:
 ## Education
 
 * Training in Osteopathic Medicine, Western University of Health Sciences
-  * Completed Preclinical curriculum and Clinical clerkships, 2021 - 2025
+  * Completed preclinical curriculum and clinical clerkships, 2021 - 2025
 * M.S. in Biotechnology, Thomas Jefferson University, 2019
 * B.S./M.S. in Biomedical Engineering, Drexel University, 2016
 
