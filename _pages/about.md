@@ -2,18 +2,47 @@
 permalink: /
 title: "About"
 author_profile: true
-redirect_from: 
+redirect_from:
   - /about/
   - /about.html
 ---
- 
 
-I am a biomedical engineer and neuroimaging researcher interested in understanding brain circuits and translating them into better approaches for neuromodulation. My work spans functional and structural neuroimaging, brain connectivity, and image-guided neurosurgical research, with applications in deep brain stimulation, epilepsy, Parkinson’s disease, and chronic pain.
+<div class="profile-blocks profile-blocks--single">
+{% for section in site.data.profile_sections.sections %}
+  {% if section.enabled %}
+  <section class="profile-block" id="{{ section.id }}">
+    <h2>{{ section.title }}</h2>
 
-I am particularly interested in combining neuroimaging with computational methods to better understand individual brain networks and improve the precision of neuromodulation.
+{% if section.body %}
+  <div class="profile-block__body">{{ section.body | markdownify }}</div>
+{% endif %}
 
-My long-term goal is to develop clinically meaningful tools and technologies at the intersection of neuroscience, engineering, and computation. I am currently seeking PhD training opportunities for Fall 2027 to further pursue this direction.
+{% if section.items %}
+<ul class="profile-timeline">
+  {% for item in section.items %}
+  <li>
+    <strong class="profile-timeline__degree">{{ item.title }}</strong>
+    <span class="profile-timeline__meta">
+      {{ item.organization }}, {{ item.city }}
+      <span class="profile-timeline__diamond" aria-hidden="true">◆</span>{{ item.date }}
+    </span>
+    {% if item.detail %}
+      <span class="profile-timeline__detail">{{ item.detail }}</span>
+    {% endif %}
+  </li>
+  {% endfor %}
+</ul>
+{% endif %}
 
-[Curriculum Vitae](https://miaojingya.github.io/cv) 
+{% if section.tags %}
+  <ul class="profile-tags">
+    {% for tag in section.tags %}<li>{{ tag }}</li>{% endfor %}
+  </ul>
+{% endif %}
 
-
+  </section>
+  {% endif %}
+{% endfor %}
+</div>
+<br>
+<p class="profile-cta"><a class="btn btn--primary" href="{{ '/cv/' | relative_url }}">View full curriculum vitae</a></p>

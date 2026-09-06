@@ -6,55 +6,39 @@
   {% assign teaser = site.teaser %}
 {% endif %}
 
-{% if post.id %}
-  {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
-{% else %}
-  {% assign title = post.title %}
-{% endif %}
-
-
 <div class="list__item publication__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/ScholarlyArticle">
 
+    <p class="publication__type">{{ post.type | default: "Publication" }}</p>
+
     <h2 class="publication__title" itemprop="headline">
-      {{ title }}
+      {{ post.title }}
     </h2>
 
-    {% if post.excerpt %}
-      <div class="publication__body" itemprop="description">
-        {{ post.excerpt | markdownify }}
-      </div>
+    <p class="publication__metadata">
+      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %Y" }}</time>
+      {% if post.journal %}<span>{{ post.journal }}</span>{% endif %}
+      {% if post.volume %}<span>{{ post.volume }}{% if post.issue %}({{ post.issue }}){% endif %}{% if post.pages %}:{{ post.pages }}{% elsif post.article_number %}:{{ post.article_number }}{% endif %}</span>{% endif %}
+    </p>
+
+    {% if post.authors %}<p class="publication__authors"><i class="fas fa-users" aria-hidden="true"></i> {{ post.authors }}</p>{% endif %}
+
+    {% if post.doi %}
+      <p class="publication__doi"><i class="fas fa-file-lines" aria-hidden="true"></i> DOI: <a href="https://doi.org/{{ post.doi }}">{{ post.doi }}</a></p>
     {% endif %}
 
-    {% if post.citation %}
-      <div class="publication__citation">
-        {{ post.citation }}
-      </div>
-    {% else %}
-      <div class="publication__citation">
-        {% if post.authors %}{{ post.authors }}. {% endif %}
-        {{ post.date | date: "%Y" }}.
-        “{{ post.title }}.”
-        {% if post.venue %}<em>{{ post.venue }}</em>.{% endif %}
-      </div>
+    {% if site.data.publication_settings.show_summaries and post.excerpt %}
+      <div class="publication__body" itemprop="description">{{ post.excerpt | markdownify }}</div>
     {% endif %}
 
     <div class="publication__links">
 
       {% if post.doi %}
-        <a href="https://doi.org/{{ post.doi }}"
-           aria-label="DOI"
-           title="View publication">
-          <i class="fas fa-link" aria-hidden="true"></i>
-        </a>
+        <a class="publication__button" href="https://doi.org/{{ post.doi }}">View article</a>
       {% endif %}
 
       {% if post.paperurl %}
-        <a href="{{ post.paperurl }}"
-           aria-label="PDF"
-           title="Download paper">
-          <i class="fas fa-file-pdf" aria-hidden="true"></i>
-        </a>
+        <a class="publication__button" href="{{ post.paperurl }}">PDF</a>
       {% endif %}
 
       {% if post.slidesurl %}

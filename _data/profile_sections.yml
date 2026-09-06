@@ -1,0 +1,75 @@
+# About-page sections are rendered in this order.
+# Set enabled: false to hide a section, or move an entry to reorder it.
+sections:
+  - id: research-interests
+    title: "Research Interests"
+    enabled: true
+    body: >-
+      My research has focused on using neuroimaging to study brain connectivity 
+      and neuromodulation across epilepsy, Parkinson's disease, chronic pain, and 
+      other neurological conditions. Through this work, I became increasingly 
+      interested not only in whether an intervention produces a clinical effect, 
+      but also in what neural activity and stimulation can reveal about individual 
+      brain circuits and their relationships to cognition and behavior. <br><br>
+      
+      Going forward, I hope to integrate multimodal neuroimaging, computational 
+      methods, neural recordings, and neuromodulation to study human brain function 
+      from circuit-level mechanisms to behavior in real-world settings. Ultimately, 
+      I am interested in using these insights both to better understand the human 
+      brain and to develop more precise, individualized, and clinically meaningful 
+      interventions.
+
+  - id: education
+    title: "Education"
+    enabled: true
+    items:
+      - title: "Osteopathic Medicine Training"
+        organization: "Western University of Health Sciences"
+        city: "Pomona, CA"
+        date: "2021 – 2025"
+        detail: "Completed preclinical curriculum and clinical clerkships"
+      - title: "M.S. in Biotechnology"
+        organization: "Thomas Jefferson University"
+        city: "Philadelphia, PA"
+        date: "2017 – 2019"
+      - title: "B.S./M.S. in Biomedical Engineering"
+        organization: "Drexel University"
+        city: "Philadelphia, PA"
+        date: "2011 – 2016"
+        detail: "magna cum laude <br>
+          Concentration: Biomechanics & Human Performance Engineering <br>
+          Minor: Psychology" 
+
+  - id: skills
+    title: "Skills"
+    enabled: true
+    tags:
+      - "FreeSurfer"
+      - "FSL"
+      - "MRtrix"
+      - "MATLAB (SPM, CONN, LeadDBS)"
+      - "3D Slicer"
+      - "ITK-SNAP"
+      - "DSI Studio"
+      - "Python"
+      - "R"
+      - "Unix/Linux shell scripting"
+      - "Git/GitHub"
+      - "CAD"
+      - "Solidworks"
+      - "Fusion360"
+
+  - id: languages
+    title: "Languages"
+    enabled: true
+    tags:
+      - "English"
+      - "Mandarin Chinese"
+
+  - id: open-to
+    title: "Open to"
+    enabled: false
+    tags:
+      - "PhD opportunities for Fall 2027"
+      - "Research collaborations"
+      - "Scientific mentorship"

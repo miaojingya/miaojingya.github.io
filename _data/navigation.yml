@@ -8,8 +8,17 @@
 #      Markdown formatted page while the second is generated using JSON.
 
 main:
+  - title: "About"
+    url: /
+
+  - title: "Research"
+    url: /research/
+
   - title: "Publications"
     url: /publications/
+
+  - title: "Service & Volunteer"
+    url: /service/
 
   # - title: "Talks"
   #   url: /talks/    
@@ -23,8 +32,7 @@ main:
   # - title: "Blog Posts"
   #   url: /year-archive/
     
-  - title: "CV"
-    url: /cv/
+  # The full CV remains available from the About page.
     
   # - title: "Guide"
   #   url: /markdown/
