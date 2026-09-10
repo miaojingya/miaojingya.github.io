@@ -45,4 +45,4 @@ redirect_from:
 {% endfor %}
 </div>
 <br>
-<p class="profile-cta"><a class="btn btn--primary" href="{{ '/cv/' | relative_url }}">View full curriculum vitae</a></p>
+<p class="profile-cta"><a class="btn btn--primary" href="{{ '/research/' | relative_url }}">View research experience</a></p>
