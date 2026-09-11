@@ -5,19 +5,18 @@ sections:
     title: "Research Interests"
     enabled: true
     body: >-
-      My research has focused on using neuroimaging to study brain connectivity 
-      and neuromodulation across epilepsy, Parkinson's disease, chronic pain, and 
-      other neurological conditions. Through this work, I became increasingly 
-      interested not only in whether an intervention produces a clinical effect, 
-      but also in what neural activity and stimulation can reveal about individual 
-      brain circuits and their relationships to cognition and behavior. <br><br>
+      My research has focused on using neuroimaging to study brain connectivity and neuromodulation 
+      across epilepsy, Parkinson’s disease, chronic pain, and other neurological conditions. Through 
+      this work, I became increasingly interested not only in whether an intervention produces a 
+      clinical effect, but in how individual brain circuits and pathways shape cognition, behavior, 
+      and treatment response. <br><br>
       
-      Going forward, I hope to integrate multimodal neuroimaging, computational 
-      methods, neural recordings, and neuromodulation to study human brain function 
-      from circuit-level mechanisms to behavior in real-world settings. Ultimately, 
-      I am interested in using these insights both to better understand the human 
-      brain and to develop more precise, individualized, and clinically meaningful 
-      interventions.
+      Going forward, I hope to integrate multimodal neuroimaging, computational modeling and machine 
+      learning, neural recordings, and neuromodulation to study these relationships at greater depth. 
+      I am particularly interested in understanding how stimulation engages specific neural pathways 
+      and in developing imaging- and circuit-based models that can move beyond characterizing observed 
+      effects toward predicting individual outcomes. Ultimately, I hope to translate these insights 
+      into more precise, individualized, and clinically meaningful interventions.
 
   - id: education
     title: "Education"
